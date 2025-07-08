@@ -1,0 +1,10 @@
+{
+  "files.associations": {
+    "*.html": "html",
+    "*.htm": "html",
+    "*.svg": "html",
+    "*.css": "tailwindcss",
+    "*.scss": "scss",
+    "*.sass": "scss"
+  }
+}
