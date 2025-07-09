@@ -1,2 +1,194 @@
-<h1 class="text-3xl font-medium underline"> Hacker Trials</h1>
-<router-outlet />
+<div class="min-h-screen bg-black text-white overflow-x-hidden">
+  <!-- Header/Navigation -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-sm border-b border-purple-500/20">
+    <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <img src="/isotipo/Hacker-Trials-Isotipo.png" alt="Hacker Trials Logo" class="h-8 w-8" />
+        <span class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+          HACKER TRIALS
+        </span>
+      </div>
+      <div class="hidden md:flex space-x-6">
+        <a href="#about" class="hover:text-cyan-400 transition-colors">Sobre Nosotros</a>
+        <a href="#features" class="hover:text-cyan-400 transition-colors">Características</a>
+        <a href="#testimonials" class="hover:text-cyan-400 transition-colors">Testimonios</a>
+        <a href="#contact" class="hover:text-cyan-400 transition-colors">Contacto</a>
+      </div>
+      <button
+        class="bg-gradient-to-r from-cyan-500 to-purple-600 px-4 py-2 rounded-full text-sm font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all">
+        Únete Ahora
+      </button>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section
+    class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-purple-900/20 to-cyan-900/20 pt-16">
+    <div class="absolute inset-0 bg-gradient-to-br from-black/50 via-purple-900/10 to-cyan-900/10"></div>
+    <div class="absolute inset-0"
+      [style.background-image]="'radial-gradient(circle at 25% 25%, rgba(120, 119, 198, 0.1) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(255, 119, 198, 0.1) 0%, transparent 50%)'">
+    </div>
+
+    <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-transparent to-purple-500/10 animate-pulse">
+    </div>
+
+    <div class="container mx-auto px-4 text-center z-10">
+      <div class="mb-8">
+        <div
+          class="bg-gradient-to-r from-cyan-400 to-purple-400 text-black font-bold text-lg px-6 py-2 mb-6 animate-bounce inline-block rounded-full">
+          🔥 ÚNETE HACKER TRIALS 🔥
+        </div>
+      </div>
+
+      <h1 class="text-6xl md:text-8xl font-black mb-6 leading-tight">
+        DONDE LOS
+        <span
+          class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse glitch-text cursor-crosshair">
+          {{glitchText}}
+        </span>
+        <br />
+        <span class="text-yellow-400">DOMINAN</span> EL CÓDIGO
+      </h1>
+
+      <p class="text-xl md:text-2xl mb-8 text-gray-300 max-w-4xl mx-auto font-medium">
+        🚀 <strong>NO ES SOLO UNA PLATAFORMA.</strong> Es el campo de batalla donde los desarrolladores, hackers
+        éticos y genios de las redes
+        <span class="text-cyan-400 font-bold"> COMPITEN, APRENDEN Y SE CONVIERTEN EN LEYENDAS.</span>
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+        <button
+          class="flex bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold text-xl px-8 py-4 rounded-full shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 transform hover:scale-105 cursor-pointer">
+          <lucide-angular [img]="Shield" class="mr-2 h-6 w-6"></lucide-angular>
+          ACEPTA EL DESAFÍO
+        </button>
+        <button
+          class="flex border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold text-xl px-8 py-4 rounded-full transition-all duration-300 cursor-pointer">
+          <lucide-angular [img]="Play" class="mr-2 h-6 w-6"></lucide-angular>
+          VER DEMO ÉPICA
+        </button>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+        <div class="text-center">
+          <div class="text-3xl font-bold text-cyan-400">50K+</div>
+          <div class="text-sm text-gray-400">GUERREROS ACTIVOS</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-purple-400">1M+</div>
+          <div class="text-sm text-gray-400">RETOS COMPLETADOS</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-yellow-400">500+</div>
+          <div class="text-sm text-gray-400">EMPRESAS ALIADAS</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-green-400">95%</div>
+          <div class="text-sm text-gray-400">TASA DE ÉXITO LABORAL</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <lucide-angular [img]="ChevronRight" class="h-8 w-8 text-cyan-400 rotate-90" />
+    </div>
+
+  </section>
+
+  <!-- Empresas que confían en nosotros -->
+  <section class="py-16 bg-gradient-to-br from-black via-cyan-900/10 to-purple-900/10">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-black text-center mb-4">
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+          EMPRESAS QUE
+        </span>
+        <span class="text-yellow-400"> CONFÍAN EN NOSOTROS</span>
+      </h2>
+      <p class="text-lg text-gray-300 text-center mb-12 max-w-2xl mx-auto">
+        Las mejores empresas tech del mundo eligen Hacker Trials para encontrar el talento más élite
+      </p>
+
+      <div
+        class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center opacity-70 hover:opacity-100 transition-opacity duration-300">
+        <!-- Placeholder para logos de empresas -->
+        <div
+          class="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 p-6 rounded-lg border border-cyan-400/30 flex items-center justify-center h-20 w-32 hover:border-cyan-400/60 transition-all duration-300">
+          <span class="text-sm font-semibold text-gray-300">MICROSOFT</span>
+        </div>
+        <div
+          class="bg-gradient-to-r from-purple-500/20 to-pink-500/20 p-6 rounded-lg border border-purple-400/30 flex items-center justify-center h-20 w-32 hover:border-purple-400/60 transition-all duration-300">
+          <span class="text-sm font-semibold text-gray-300">GOOGLE</span>
+        </div>
+        <div
+          class="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 p-6 rounded-lg border border-cyan-400/30 flex items-center justify-center h-20 w-32 hover:border-cyan-400/60 transition-all duration-300">
+          <span class="text-sm font-semibold text-gray-300">META</span>
+        </div>
+        <div
+          class="bg-gradient-to-r from-yellow-500/20 to-orange-500/20 p-6 rounded-lg border border-yellow-400/30 flex items-center justify-center h-20 w-32 hover:border-yellow-400/60 transition-all duration-300">
+          <span class="text-sm font-semibold text-gray-300">AMAZON</span>
+        </div>
+        <div
+          class="bg-gradient-to-r from-green-500/20 to-teal-500/20 p-6 rounded-lg border border-green-400/30 flex items-center justify-center h-20 w-32 hover:border-green-400/60 transition-all duration-300">
+          <span class="text-sm font-semibold text-gray-300">SPOTIFY</span>
+        </div>
+        <div
+          class="bg-gradient-to-r from-pink-500/20 to-red-500/20 p-6 rounded-lg border border-pink-400/30 flex items-center justify-center h-20 w-32 hover:border-pink-400/60 transition-all duration-300">
+          <span class="text-sm font-semibold text-gray-300">NETFLIX</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black border-t border-purple-500/20 py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center space-x-2 mb-4">
+            <img src="/isotipo/Hacker-Trials-Isotipo.png" alt="Hacker Trials Logo" class="h-8 w-8" />
+            <span class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+              HACKER TRIALS
+            </span>
+          </div>
+          <p class="text-gray-400 text-sm">
+            La plataforma definitiva para desarrolladores y hackers éticos que buscan dominar el código.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-white font-semibold mb-4">Plataforma</h3>
+          <ul class="space-y-2 text-gray-400 text-sm">
+            <li><a href="#" class="hover:text-cyan-400 transition-colors">Desafíos</a></li>
+            <li><a href="#" class="hover:text-cyan-400 transition-colors">Comunidad</a></li>
+            <li><a href="#" class="hover:text-cyan-400 transition-colors">Ranking</a></li>
+            <li><a href="#" class="hover:text-cyan-400 transition-colors">Certificaciones</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-white font-semibold mb-4">Recursos</h3>
+          <ul class="space-y-2 text-gray-400 text-sm">
+            <li><a href="#" class="hover:text-cyan-400 transition-colors">Documentación</a></li>
+            <li><a href="#" class="hover:text-cyan-400 transition-colors">Tutoriales</a></li>
+            <li><a href="#" class="hover:text-cyan-400 transition-colors">Blog</a></li>
+            <li><a href="#" class="hover:text-cyan-400 transition-colors">Soporte</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-white font-semibold mb-4">Contacto</h3>
+          <ul class="space-y-2 text-gray-400 text-sm">
+            <li><a href="#" class="hover:text-cyan-400 transition-colors">Sobre Nosotros</a></li>
+            <li><a href="#" class="hover:text-cyan-400 transition-colors">Carreras</a></li>
+            <li><a href="#" class="hover:text-cyan-400 transition-colors">Prensa</a></li>
+            <li><a href="#" class="hover:text-cyan-400 transition-colors">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-purple-500/20 mt-8 pt-8 text-center text-gray-400 text-sm">
+        <p>&copy; 2025 Hacker Trials. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+</div>
