@@ -1,0 +1,36 @@
+# Robots.txt para Hacker Trials
+# https://hackertrials.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://hackertrials.com/sitemap.xml
+
+# Crawl-delay (opcional, para evitar sobrecarga del servidor)
+Crawl-delay: 1
+
+# Permitir acceso a recursos importantes
+Allow: /isotipo/
+Allow: /imagotipo/
+Allow: /others/
+Allow: /people/
+
+# Disallow archivos que no deben ser indexados
+Disallow: /*.json$
+Disallow: /src/
+Disallow: /node_modules/
+Disallow: /.git/
+
+# Bots específicos
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
